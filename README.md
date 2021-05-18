@@ -13,7 +13,7 @@ gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
 
 ## HTTP Server
 
-Local IP address:
+**Local IP address**:
 ```
 # MacOS
 ipconfig getifaddr en0
@@ -22,13 +22,13 @@ ipconfig getifaddr en0
 hostname -I
 ```
 
-Public IP Address:
+**Public IP Address**:
 ```
 # MacOS + Linux
 curl ifconfig.me
 ```
 
-Firewall:
+**Firewall**:
 ```
 sudo ufw allow from any to any port 8000 proto tcp
 sudo ufw allow from any to any port 8000 proto udp
@@ -36,6 +36,13 @@ sudo ufw allow from any to any port 8000 proto udp
 sudo ufw status
 
 sudo ufw deny from any to any port 8000 proto udp
+```
+
+**Check the connection**:
+```
+telnet xx.xx.xx.xx 8000
+
+nmap -p 8000 xx.xx.xx.xx
 ```
 
 ## References
